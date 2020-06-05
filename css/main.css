@@ -1,0 +1,13 @@
+#links-div {
+    background: #e0e0e0;
+}
+
+#links-div ul{
+    list-style: none;
+    padding: 0px;
+    display: inline-flex;
+}
+
+#links-div ul li{
+    padding: 0px 10px;
+}
