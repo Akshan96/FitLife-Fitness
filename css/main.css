@@ -35,3 +35,16 @@ table, th, td {
 .location,.offer,.other,.operation-hours{
     margin:10px;
 }
+
+a.tab {
+    display: inline-block;
+    padding: 10px 79px;
+    margin: 20px;
+    border: 1px solid #a1a1a1;
+    color: #777;
+    border-radius: 40px;
+}
+
+a.tab:hover {
+    background: #e0e0e0;
+}
