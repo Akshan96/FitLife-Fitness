@@ -26,21 +26,64 @@
             </ul>
         </div>
 
-        <a href="./cardio.html">
-            <p id="para1"> Cardio </p>
-        </a>
-
-        <a href="./strength.html">
-            <p class="para2"> Strength </p>
-        </a>
-
-        <a href="./other.html">
-            <p> Other </p>
-        </a>
-
+        <div class="clsform">
+            <div class="alert success" style="display:none;">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                Your Order is submitted Successfully!
+            </div>
+            <form id="frmMember" name="frmMember" method="post" onsubmit="return fnsubmit();">
+                <div>
+                    <label>Name<sup>*</sup></label>
+                    <input type="text" name="name" id="name" class="required" required="" />
+                </div>
+                <div>
+                    <label>Email<sup>*</sup></label>
+                    <input type="text" name="email" id="email" class="required" required="" />
+                </div>
+                <div>
+                    <label>Address<sup>*</sup></label>
+                    <textarea name="address" id="address" class="required" required=""></textarea>
+                </div>
+                <div>
+                    <label>Type of Membership(Monthly pay-as-you-go)<sup>*</sup></label>
+                    <select name="type" id="type" class="required" required="">
+                        <option value="">Select</option>
+                        <option value="3 months">3 months</option>
+                        <option value="6 months">6 months</option>
+                        <option value="12 months">12 months</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Method of Payment</label>
+                    <div>
+                        <label for="method_debit">
+                            <input type="radio" id="method_debit" name="method" value="Debit" /> Debit
+                        </label>
+                        <label for="method_credit">
+                            <input type="radio" id="method_credit" name="method" value="Credit" /> Credit
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label for="method_debit">
+                        <input type="checkbox" id="method_debit" name="method" value="Debit" /> 
+                        Want to receive email updates about upcoming new promotions and latest news?
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" id="btnSubmit" name="btnSubmit" value="Submit" />
+                </div>    
+            </form>
+        </div>
     </div>
-
     <hr>
-
+    <script type="text/javascript">
+        function fnsubmit() {
+            document.getElementsByClassName('alert success')[0].style.display = 'block';
+            document.getElementById('frmMember').reset();
+            window.scrollTo(0, 0); 
+            return false;
+        }
+    </script>
 </body>
 </html>
